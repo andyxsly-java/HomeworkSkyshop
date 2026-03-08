@@ -35,6 +35,5 @@ public class ShopController {
     public Collection<SearchResult> search(String pattern) {
         return searchService.search(pattern);
     }
-
 }
 
