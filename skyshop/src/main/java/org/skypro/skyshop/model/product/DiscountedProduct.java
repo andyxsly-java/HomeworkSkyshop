@@ -40,4 +40,5 @@ public class DiscountedProduct extends Product {
     public String getContentType() {
         return "";
     }
+
 }

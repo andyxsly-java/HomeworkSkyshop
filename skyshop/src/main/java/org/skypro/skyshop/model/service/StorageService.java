@@ -65,7 +65,6 @@ public class StorageService {
 
     public Collection<Searchable> getAllSearchables() {
         List<Searchable> result = new ArrayList<>();
-
         result.addAll(products.values());
         result.addAll(articles.values());
 
