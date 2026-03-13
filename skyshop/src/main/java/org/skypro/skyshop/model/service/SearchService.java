@@ -1,4 +1,4 @@
-package org.skypro.skyshop.model.search;
+package org.skypro.skyshop.model.service;
 
 import org.skypro.skyshop.model.search.SearchResult;
 import org.skypro.skyshop.model.service.StorageService;
