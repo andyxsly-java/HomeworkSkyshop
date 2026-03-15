@@ -15,6 +15,7 @@ public interface Searchable {
     String getSearchableName();
 
     default String getStringRepresentation() {
+
         String var10000 = this.getSearchableName();
         return var10000 + " — " + this.getSearchType();
     }

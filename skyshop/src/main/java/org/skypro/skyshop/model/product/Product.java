@@ -29,7 +29,6 @@ public Product(UUID id, String name) {
         return false;
     }
 
-
     @Override
     public String getSearchableName() {
         return name;
