@@ -42,7 +42,7 @@ public class BasketService {
 
                     Product product = storageService
                             .getProductById(entry.getKey())
-                            .orElseThrow();
+                            .orElseThrow(NoSuchProductException::new);
 
                     return new BasketItem(product, entry.getValue());
                 })

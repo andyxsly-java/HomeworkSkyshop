@@ -14,10 +14,9 @@ public class ShopControllerAdvice {
             (NoSuchProductException e) {
 
 
-        ShopError error = null;
-        error = new ShopError(
+        ShopError error = new ShopError(
                 "PRODUCT_NOT_FOUND",
-                error.getMessage()
+                e.getMessage()
         );
         return ResponseEntity.status(HttpStatus.NOT_FOUND).
 
