@@ -23,10 +23,10 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class SearchServiceTest {
 
-    @InjectMocks
+    @Mock
     private StorageService storageService;
 
-    @Mock
+    @InjectMocks
     private SearchService searchService;
 
     @Test
@@ -41,14 +41,18 @@ public class SearchServiceTest {
     void search_whenStorageNoMatches_shouldReturnEmptyList() {
         Searchable searchable = createSearchable("Toy");
         when(storageService.getAllSearchables()).thenReturn(List.of());
-        Collection<SearchResult> results = searchService.search("Phone");
+        Collection<SearchResult> result = searchService.search("Phone");
+
+        assertEquals("Phone", result);
     }
 
     @Test
     void search_whenMatchFound_shouldReturnOneResult() {
         Searchable searchable = createSearchable("Product");
         when(storageService.getAllSearchables()).thenReturn(List.of());
-        Collection<SearchResult> results = searchService.search("test");
+        Collection<SearchResult> result = searchService.search("Book");
+
+        assertEquals("Notebook", result);
     }
 
     private Searchable createSearchable(String product) {
